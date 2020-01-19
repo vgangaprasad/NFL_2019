@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>D3 v5 Zoomable Sunburst</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@observablehq/stdlib"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-12 px-0">
+          <h1 class="display-5 font-weight-bold">NFL 2019 - Regular Season Games and Results</h1>
+          <p class="lead my-3"> Interactive Sunburst Chart to display the NFL by Confererence, Division, Team and the games played and results.</p>
+          <p class="lead mb-0">Click the chart below...</p>
+        </div>
+    </div>
+
+
+ <div class="row">
+   <div class="col-lg-8 col-md-8 col-sm-12 desc">
+	<div style="width:800px; margin:0 auto;">
+		<div id="observablehq-fcebc0fa"></div>
+			<script type="module">
+				import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+				import define from "https://api.observablehq.com/@vgangaprasad/zoomable-sunburst.js?v=3";
+				const inspect = Inspector.into("#observablehq-fcebc0fa");
+				(new Runtime).module(define, name => (name === "chart") && inspect());
+			</script>
+	</div>
+	</div>	
+
+ 	<div class="col-lg-4 col-md-4 col-sm-12">
+
+	    <h1><strong>Why the Sunburst Chart?</strong></h1>
+	    <p>
+	    	Recently I saw couple of Sunburst charts in the web and I found it very interesting because shared lot of information in one chart and also it is ideal for  displaying the hierarchical data. </p>
+	    	<br>
+	    	<p>I play Fantasy Football and lost pretty bad this season by losing 8 games in a row so I am planning to up my analytics game to get better for the next season :) Thought I will start with some tools to help me get better in next season. Started with the Sun Burst chart to get all the games played and the results in one chart.<p>
+	    <br>
+	    <p>	Future plans are to:
+	    	<ul>
+	    	<li> Create charts for comparing players for the last 3 years,  </li>
+	    	<li> How the trend is for each player from Game 1 to Game 16 for the last 3 years? </li>
+	    	<li> few more... </li>
+	    	</ul>
+	    </p>
+
+	    <h1> <strong>Credits:</strong></h1>
+	    	<p> Thanks to <a href="https://bost.ocks.org/mike/" target="_blank"> Mike Bostock </a> for the inspiration and the code to make it work.</p>
+	    		<br>
+	    	<p> If you are interested in looking at the code and tools used, please check <a href="https://observablehq.com/@vgangaprasad?tab=notebooks" target="_blank"> https://observablehq.com/@vgangaprasad?tab=notebooks </a></p>
+   </div>
+</div>
+
+</body>
+
